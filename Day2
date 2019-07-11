@@ -1,0 +1,18 @@
+DEFINITION:
+Linear Regression: find hyposesis function mapping x to y, the line/curve!
+    Process: training set -> learning algorithm -> finally get hypothesis function (function works by iteself)
+    Univariate LR: one variable(one feature)
+
+    Notation: a list of m training examples (x(i),y(i));i=1,...,m
+      All in all, goal is, given a training set, to learn a function h : X → Y | h(x) is a “good” predictor for the corresponding value of y
+
+    Thoughts: h(x) = theta0x1 + theta1x2 + theta2x3 + ... thetaK, LR is just to find these thetas
+  
+COST FUNCTION:
+    One example is square error function [sum of square difference to the h(x) vs. real value y] * (1/2m or something others) make the number smaller.
+    Purpose is to minimize the cost function to get theta0,1....
+    
+    Cost Function - Intuition I
+      Cost function: J(theta) = square error function including theta
+      
+      cost function has a graph for each theta, find the minimum of THIS!
