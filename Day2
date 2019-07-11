@@ -4,7 +4,7 @@ Linear Regression: find hyposesis function mapping x to y, the line/curve!
     Univariate LR: one variable(one feature)
 
     Notation: a list of m training examples (x(i),y(i));i=1,...,m
-      All in all, goal is, given a training set, to learn a function h : X → Y | h(x) is a “good” predictor for the corresponding value of y
+      All in all, goal is, given a training set, to learn a function h : X → Y 
 
     Thoughts: h(x) = theta0x1 + theta1x2 + theta2x3 + ... thetaK, LR is just to find these thetas
   
@@ -13,6 +13,8 @@ COST FUNCTION:
     Purpose is to minimize the cost function to get theta0,1....
     
     Cost Function - Intuition I
-      Cost function: J(theta) = square error function including theta
+      Cost function: J(theta) = square error function including theta (cost function has a graph based on different theta value)
+      Find the minimum of THIS! -> which is find theta which minimize the square error function -> WIN
       
-      cost function has a graph for each theta, find the minimum of THIS!
+      Sometimes, find lowest point in certain range of cost function is acceptable. (My thoughts)
+      
