@@ -1,0 +1,56 @@
+Supervised: train model to learn.
+Unsupervised: model learn by itself.
+
+Tom Mitchell provides a more modern definition: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
+
+Example: playing checkers.
+
+E = the experience of playing many games of checkers
+
+T = the task of playing checkers.
+
+P = the probability that the program will win the next game.
+
+In general, any machine learning problem can be assigned to one of two broad classifications:
+
+Supervised learning and Unsupervised learning.
+
+
+Supervised: when we have right answers given
+  - Regression: predict continuous
+      Project: Housing price prediction - regression problem 
+  - Classification: discrete value (0/1)
+      Project: Breast cancer
+              Tumor size as feature to decide
+              Tumor size and age to decide (two features) 
+              ...more features
+              how to select right features and store infi features:
+              Support vector machine 
+  
+Unsupervised: when we have data, they looks different. Allows us to approach problems with little or no idea what our 
+  results should look like. 
+
+  Clustering: 
+    projects:   
+      Topic grouping
+      Genes vs. individuals
+        Take a collection of 1,000,000 different genes, and find a way to automatically group 
+        these genes into groups that are somehow similar or related by different variables, such as lifespan, location, roles, and so on.
+      Market segmentation
+      Social network analysis
+      Organize computing clusters
+      Astronomical data analysis
+      
+  Non-clustering: 
+      The "Cocktail Party Algorithm", allows you to find structure in a chaotic environment. 
+      (i.e. identifying individual voices and music from a mesh of sounds at a cocktail party).
+      cocktail party problem: seperate two voices from same audio recording.
+      
+Use Octave as your programming environment: TRUST ME
+
+
+        
+      
+      
+      
+      
