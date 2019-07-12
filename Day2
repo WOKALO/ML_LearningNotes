@@ -16,5 +16,5 @@ COST FUNCTION:
       Cost function: J(theta) = square error function including theta (cost function has a graph based on different theta value)
       Find the minimum of THIS! -> which is find theta which minimize the square error function -> WIN
       
-      Sometimes, find lowest point in certain range of cost function is acceptable. (My thoughts)
+      Sometimes, find lowest point in certain range of cost function is acceptable.
       
