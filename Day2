@@ -18,3 +18,5 @@ COST FUNCTION:
       
       Sometimes, find lowest point in certain range of cost function is acceptable.
       
+Grident Descent Cost Function Algorithm:
+    https://www.coursera.org/learn/machine-learning/supplement/U90DX/gradient-descent-for-linear-regression
