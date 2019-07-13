@@ -1,3 +1,6 @@
+https://www.coursera.org/learn/machine-learning/supplement/Q6mSN/matrices-and-vectors
+
+
 Matrix
   Dimension of matrix: # of rows
   4 * 2 Matrix, 4 rows, 2columns = R^(4x2)
@@ -10,5 +13,184 @@ Vector: n x 1 matrix, one column, n dimensional vector, 4 dimensional vector = R
 
 Uppercase: Matrix A,B,C,X
 Lowercase: Vector a,b,c,x
+
+--Syntax of octave
+	% The ; denotes we are going back to a new row.
+	A = [1, 2, 3; 4, 5, 6; 7, 8, 9; 10, 11, 12]
+
+	% Initialize a vector 
+	v = [1;2;3] 
+
+	% Get the dimension of the matrix A where m = rows and n = columns
+	[m,n] = size(A)
+
+	% You could also store it this way
+	dim_A = size(A)
+
+	% Get the dimension of the vector v 
+	dim_v = size(v)
+
+	% Now let's index into the 2nd row 3rd column of matrix A
+	A_23 = A(2,3)
+--End
+
+Matrix/Vector Operands
+
+	Matrix Addition
+		[1 0]		[4,0.5]			[5, 0.5]
+		[2 5]	+ 	[2,5]		=	[4,	10]
+		[3 1] 		[0,1]			[3,2]
+		Rule:
+			1. Aij + Bij = Cij
+			2. Only for same dimension, different dimension matrix cannot be added.
+		
+	Scalar multiplication
+			[1 0]	  	[3 0]
+		3 * [2 5]	= 	[6 15]
+			[3 1]		[9 3]
+			
+		[4	0] /4	= 	[1 0]
+		[6	3]			[1.5 0.75]
+
+		1. Exchange rule applied
+		2. Aij * a	= Bij
+
+	Combination of operands
+		3 * vectorA + vectorB - vectorC / 3
+		3Aij] + Bij - 3Cij = Dij
+		
+	Matrix + Scalar = add scalar value to each of matrix value
+		
+	Syntax
+		% Initialize matrix A and B 
+		A = [1, 2, 4; 5, 3, 2]
+		B = [1, 3, 4; 1, 1, 1]
+
+		% Initialize constant s 
+		s = 2
+
+		% See how element-wise addition works
+		add_AB = A + B 
+
+		% See how element-wise subtraction works
+		sub_AB = A - B
+
+		% See how scalar multiplication works
+		mult_As = A * s
+
+		% Divide A by s
+		div_As = A / s
+
+		% What happens if we have a Matrix + scalar?
+		add_As = A + s
+		
+		
+		
+Matrix Vector Multiplication
+
+	[1 3]			1x1 + 3x5 		[16]
+	[4 0] * [1]	=	4*1 + 0*5	=	[4]
+	[2 1]	[5]		2*1 + 1*5		[7]
+	
+	R^3x2 * R^2*1	=	R^3*1
+	
+	Rule:
+	R^mxn * R^n*1	= R^m * 1
+	
+	n = n: column of matrix A = rows of matrix B
+	
+
+
+Matrix is to simply the calculation of hypothesis calcuation, or put into a batch.
+https://www.coursera.org/learn/machine-learning/lecture/aQDta/matrix-vector-multiplication
+
+house sizes:
+
+2104
+1416
+1534
+852
+
+H(X) = -40 + 0.25 X
+
+[1	2104]		[-40]
+[1	1416]		[0.25]	= [prediction]  = datamatrix * parameters!!!
+[1	1534]	*
+[1	852]			
+		
+		
+Matrix Matrix Multiplication
+
+	[1 3 2]		x 		[1	3]
+	[4 0 1]				[0	1]
+						[5	2]
+					
+ 	[1 3 2]		[1]
+	[4 0 1]	x	[0]	= 	[11]
+				[5]		[9]
+				
+	[1 3 2]	x 	[3]	= 	[10]
+	[4 0 1]		[1]		[14]
+				[2]
+				
+	Result 	[11 10]
+			[9	14]
+
+
+M(m x n ) * N (n * o)	= C(m * o)
+
+[m row, n column] * [n rows, o column] = [m row, o column]
+
+https://www.coursera.org/learn/machine-learning/lecture/W1LNU/matrix-multiplication-properties
+Properties：
+	Not commutative
+		A x B <> B x A 
+		B is parameter set <> A is parameter set
+
+	Associative 
+		A x B x C = A x (B x C) = (A x B) x Cij
+	
+	Identity Matrix
+		integer identity = 1
+		matrix identity = matrix with diagonal = 1, all rest fill by 0
+		[1
+			1
+				1
+					1
+						1]
+		A 	* 	I1 	= 	I2 	* 	A		I1 and I2 has different dimension since no commutative
+		mxn		nxn		mxm		mxn
+		
+		
+	Syntax
+		% Initialize random matrices A and B 
+		A = [1,2;4,5]
+		B = [1,1;0,2]
+
+		% Initialize a 2 by 2 identity matrix
+		I = eye(2)
+
+		% The above notation is the same as I = [1,0;0,1]
+
+		% What happens when we multiply I*A ? 
+		IA = I*A 
+
+		% How about A*I ? 
+		AI = A*I 
+
+		% Compute A*B 
+		AB = A*B 
+
+		% Is it equal to B*A? 
+		BA = B*A 
+
+		% Note that IA = AI but AB != BA
+		
+		
+		
+		
+		
+		
+		
 
 
