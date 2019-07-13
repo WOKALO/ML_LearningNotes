@@ -1,1 +1,14 @@
+Matrix
+  Dimension of matrix: # of rows
+  4 * 2 Matrix, 4 rows, 2columns = R^(4x2)
+  
+  Aij = i row, j column
+  
+Vector: n x 1 matrix, one column, n dimensional vector, 4 dimensional vector = R^4
+  1 indexed vecotr, started label at 1
+  0 indexed vector, started label at 0 (array)
+
+Uppercase: Matrix A,B,C,X
+Lowercase: Vector a,b,c,x
+
 
