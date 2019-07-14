@@ -1,0 +1,81 @@
+https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features
+Linear Regression with multiple-features - gradience from theta 0 to theta n
+
+	Feature Scaling
+	-Divided by maximum
+		Feet: 0-2000
+		bedroom: 1-5
+			Contour figure will be really tall and skiny
+			Gradience decent taking too much time
+
+			After scaling: size/2000
+						bedroom/5
+
+			scale all close to [-1,1] for optimization
+			x0 = 1
+
+			-0.00001 <x4 < 0.00001 : not good
+
+	-Mean normalization
+		
+		xi = (xi - ui)/s1 
+		ui is the any value in the training set, it could be mean value)
+		s1 is range (max - min)
+		do not apply to x0 = 1
+		
+		Range: [-0.5, 0.5]
+		
+		
+	Learning Rate
+	thetaJ = thetaJ - alpha(d dtheta) * thetaJ
+	
+	Jtheta should decreate after more and more iteration, otherwise, something is wrong.
+	
+	alpha large: may increase
+	alpha too small: converge slow
+	try 0.001, 0.01, 0.1, 1... or 3x = 0.003, 0.03, 0.3, 3...
+	
+Feature & Polynomial Regression
+	htheta(x) = theta0 + theta1x1 + thetax2^2 + thetax3^3 + ...
+	scaling is important since, size = 1-1000, size^2 = 1-1000^2, size^3 = 1-1000^3
+	
+	htheta(x) = theta0 + theta1x1 + thetax2^2 not working since the size increase the price may converge
+	, replace with htheta(x) = theta0 + theta1x1 + sqrt(thetax2)
+	
+
+Normal Equation directly way to resolve Jtheta
+	set Jtheta' = 0 and solve for theta
+	https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation
+	x DESIGN MATRIX 
+	X = [....x1....] = x1^transpose
+		[....x2....] = x2^transpose
+		
+	x(i) = 	[1]				design matrix = [1 2000]
+			[size1(i)]	
+	
+	y = [y(1)]
+		[y(2)]
+		[y(3)]
+		
+	theta = (X^T * X)^-1 X^T y
+	
+	
+Gradient Descent 		vs. 		Normal Equation
+Need to set alpha					No need
+Need many iterations				No iterations
+Works well when n is large			O(n^3) is taken while resolve (X^T * X)^-1
+									Slow if n is large
+
+
+Normal Equation Noninvertibility
+	X^T * X is not invertible, pinv solves this even it is not vertible.
+	cause: 
+		1. redundant features (same feature: size in feet^2 and size in m^2) (linearly dependent)
+		2. too many features (delete some features, or use regularization) (m <= n)
+			m feastures <= n trainning set
+			
+How to submit homework
+https://www.coursera.org/learn/machine-learning/supplement/SFKpu/programming-tips-from-mentors
+		
+	
+	
